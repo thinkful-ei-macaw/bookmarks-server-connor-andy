@@ -18,7 +18,6 @@ app.use(cors());
 
 // authentication middleware
 app.use(function validateBearerToken(req, res, next) {
-  console.log('test 1');
   const apiToken = process.env.API_TOKEN;
   const authToken = req.get('Authorization');
 
@@ -28,12 +27,13 @@ app.use(function validateBearerToken(req, res, next) {
   }
   // move to the next middleware
   next();
-});
+}); 
 
-app.use('/bookmarks', bookmarkRouter);
+// Routes
+app.use('/bookmark', bookmarkRouter);
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Hello, World!' });
+  res.json({ message: 'Hello, World!' }); //
 });
 
 app.use((error, req, res, next) => { // eslint-disable-line no-unused-vars
