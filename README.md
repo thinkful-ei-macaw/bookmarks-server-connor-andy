@@ -10,4 +10,4 @@ Write a route handler for the endpoint GET /bookmarks/:id that returns a single 
 
 Write a route handler for POST /bookmarks that accepts a JSON object representing a bookmark and adds it to the list of bookmarks after validation. **DONE**
 
-Write a route handler for the endpoint DELETE /bookmarks/:id that deletes the bookmark with the given ID.
+Write a route handler for the endpoint DELETE /bookmarks/:id that deletes the bookmark with the given ID. **DONE**
